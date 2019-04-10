@@ -37,7 +37,7 @@ services:
 @UseBrowser(url = "http://localhost:4444/wd/hub", browser = "chrome") //url of the hub
 @UseBrowser(url = "http://localhost:4444/wd/hub", browser = "chrome")
 @RunWith(StormRunner.class) //Specify the runner
-public class MainTest extends StormUITest {
+public class MainTest extends StormUITest { //extends StormUITest
 
     @Test
     public void test1() {
