@@ -12,9 +12,9 @@ import java.util.Optional;
 
 public class StormRunner extends Runner {
 
-    private Class<? extends StormUI> testClass;
+    private Class<? extends StormUITest> testClass;
 
-    public StormRunner(Class<? extends StormUI> testClass) {
+    public StormRunner(Class<? extends StormUITest> testClass) {
         super();
         this.testClass = testClass;
     }
@@ -31,7 +31,7 @@ public class StormRunner extends Runner {
                 Optional.ofNullable(testClass.getAnnotationsByType(UseBrowser.class))
                         .orElse(new UseBrowser[]{});
         try {
-            StormUI testObject = testClass.newInstance();
+            StormUITest testObject = testClass.newInstance();
             for (UseBrowser context : contexts) {
                 testObject.initWithContext(context);
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
 
-public class StormUI {
+public class StormUITest {
 
     private WebDriver driver;
 
